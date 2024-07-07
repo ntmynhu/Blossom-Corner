@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a95d445b41b9e8c46a918646c25d20f4, type: 3}
+  m_Name: Sunflower
+  m_EditorClassIdentifier: 
+  id: 2
+  flowerName: SunFlower
+  number: 0
+  icon: {fileID: -293846841, guid: 967b2e2d11446eb43956bfcee468cda4, type: 3}
+  flowerPrefab: {fileID: 8885064055967515390, guid: 28f9fe86771f5c4449c98c4116c18384, type: 3}
+  value: 60
+  expPoint: 15

@@ -1,0 +1,703 @@
+fileFormatVersion: 2
+guid: 8142ec81a93d691448d7f10e73b776b1
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HomeSceneBackGround_UI_Seperate_0
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1466
+        width: 1143
+        height: 561
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661c633ebf117bf4a8df98f5694024f8
+      internalID: -651434999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeSceneBackGround_UI_Seperate_1
+      rect:
+        serializedVersion: 2
+        x: 2672
+        y: 1842
+        width: 540
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53a259795db479c4b9f153922ff9840a
+      internalID: 711375281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeSceneBackGround_UI_Seperate_2
+      rect:
+        serializedVersion: 2
+        x: 3279
+        y: 1963
+        width: 133
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a79fc9e18d0316547a2b00e92ddfb59f
+      internalID: -1336400685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeSceneBackGround_UI_Seperate_3
+      rect:
+        serializedVersion: 2
+        x: 2370
+        y: 1762
+        width: 172
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14cf1e79b969f6444bde124051e076d7
+      internalID: -1424228617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeSceneBackGround_UI_Seperate_4
+      rect:
+        serializedVersion: 2
+        x: 3276
+        y: 1768
+        width: 455
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a065413e57c4084f8b24ee36416dbcc
+      internalID: 1011966773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeSceneBackGround_UI_Seperate_6
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 1432
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8863d473c21e4cc499db8d1b90d0d823
+      internalID: -262092032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeSceneBackGround_UI_Seperate_7
+      rect:
+        serializedVersion: 2
+        x: 2306
+        y: 330
+        width: 296
+        height: 1337
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 130, y: 82, z: 133, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41d10eafea86d8849bf7bbd85a24b70b
+      internalID: -1917054086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeSceneBackGround_UI_Seperate_8
+      rect:
+        serializedVersion: 2
+        x: 2717
+        y: 1166
+        width: 776
+        height: 550
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 61, y: 64, z: 61, w: 61}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a1ad7b0d44acec479f08c4cff31c2c8
+      internalID: 373876714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeSceneBackGround_UI_Seperate_9
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 829
+        width: 124
+        height: 525
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae1989beeed7a2b49a8e8178e830333a
+      internalID: 229330367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeSceneBackGround_UI_Seperate_10
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 861
+        width: 107
+        height: 510
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb40a6d83f31ec845bfe59b05ffd90a2
+      internalID: 1355619680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeSceneBackGround_UI_Seperate_11
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 967
+        width: 390
+        height: 419
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 70, z: 66, w: 60}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 482a857442bc26f4a86a0639a5323263
+      internalID: -594228408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeSceneBackGround_UI_Seperate_12
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 1159
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7136d7d4f0c6b2e45a9ddcfd32ca855a
+      internalID: -134780258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeSceneBackGround_UI_Seperate_13
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 1011
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56bc317d098c93144b98a3b711377a19
+      internalID: 1267311396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeSceneBackGround_UI_Seperate_14
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 1003
+        width: 38
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671cb3be4a755734396997055b8fbd8d
+      internalID: 1004338744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeSceneBackGround_UI_Seperate_15
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 1005
+        width: 47
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6ac96ab8f0642c44853ba217daf8274
+      internalID: -1904955470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeSceneBackGround_UI_Seperate_16
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 1005
+        width: 56
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b309c20d68a25d41a6152c2b8bab623
+      internalID: -97667725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeSceneBackGround_UI_Seperate_17
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 1009
+        width: 60
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8facde9ed19d17f49a6bec837c2a696b
+      internalID: 1867244559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeSceneBackGround_UI_Seperate_18
+      rect:
+        serializedVersion: 2
+        x: 1895
+        y: 910
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f570069ffa3643e4e92f38bf9d6ead7d
+      internalID: -291152141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeSceneBackGround_UI_Seperate_19
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 748
+        width: 731
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acf97deb1cb049f49affc24c0495365a
+      internalID: 2044885110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeSceneBackGround_UI_Seperate_21
+      rect:
+        serializedVersion: 2
+        x: 1894
+        y: 655
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f02c4041d8c56d448595771b9030a49
+      internalID: -2118735026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeSceneBackGround_UI_Seperate_22
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 574
+        width: 204
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b83623174c7c61940a3a14bea58af612
+      internalID: -1685558023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeSceneBackGround_UI_Seperate_24
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 576
+        width: 733
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fba4928a2fc69934e8b734801073def8
+      internalID: 101580646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeSceneBackGround_UI_Seperate_27
+      rect:
+        serializedVersion: 2
+        x: 1889
+        y: 369
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 894ef5e93c57aeb469f8d1e0eb6248bd
+      internalID: -1323080661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeSceneBackGround_UI_Seperate_28
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 24
+        width: 370
+        height: 447
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6c0b87828cb6e341a7cb6afd0ae3ad4
+      internalID: 1635200091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeSceneBackGround_UI_Seperate_5
+      rect:
+        serializedVersion: 2
+        x: 2306
+        y: 330
+        width: 296
+        height: 1337
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 130, y: 82, z: 133, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6f19d999ba7cf448a815a88445101bb
+      internalID: 1763111395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeSceneBackGround_UI_Seperate_20
+      rect:
+        serializedVersion: 2
+        x: 3422
+        y: 1784
+        width: 313
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 47, z: 56, w: 49}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8212c86f153b68e4c8196133f23b468c
+      internalID: -1093163395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      HomeSceneBackGround_UI_Seperate_0: -651434999
+      HomeSceneBackGround_UI_Seperate_1: 711375281
+      HomeSceneBackGround_UI_Seperate_10: 1355619680
+      HomeSceneBackGround_UI_Seperate_11: -594228408
+      HomeSceneBackGround_UI_Seperate_12: -134780258
+      HomeSceneBackGround_UI_Seperate_13: 1267311396
+      HomeSceneBackGround_UI_Seperate_14: 1004338744
+      HomeSceneBackGround_UI_Seperate_15: -1904955470
+      HomeSceneBackGround_UI_Seperate_16: -97667725
+      HomeSceneBackGround_UI_Seperate_17: 1867244559
+      HomeSceneBackGround_UI_Seperate_18: -291152141
+      HomeSceneBackGround_UI_Seperate_19: 2044885110
+      HomeSceneBackGround_UI_Seperate_2: -1336400685
+      HomeSceneBackGround_UI_Seperate_20: -1093163395
+      HomeSceneBackGround_UI_Seperate_21: -2118735026
+      HomeSceneBackGround_UI_Seperate_22: -1685558023
+      HomeSceneBackGround_UI_Seperate_23: 772747972
+      HomeSceneBackGround_UI_Seperate_24: 101580646
+      HomeSceneBackGround_UI_Seperate_25: -738578276
+      HomeSceneBackGround_UI_Seperate_26: 1924359673
+      HomeSceneBackGround_UI_Seperate_27: -1323080661
+      HomeSceneBackGround_UI_Seperate_28: 1635200091
+      HomeSceneBackGround_UI_Seperate_29: 997444563
+      HomeSceneBackGround_UI_Seperate_3: -1424228617
+      HomeSceneBackGround_UI_Seperate_4: 1011966773
+      HomeSceneBackGround_UI_Seperate_5: 1763111395
+      HomeSceneBackGround_UI_Seperate_6: -262092032
+      HomeSceneBackGround_UI_Seperate_7: -1917054086
+      HomeSceneBackGround_UI_Seperate_8: 373876714
+      HomeSceneBackGround_UI_Seperate_9: 229330367
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
