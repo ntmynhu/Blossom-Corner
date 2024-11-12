@@ -34,7 +34,7 @@ public class FlowerButton : MonoBehaviour
         {
             MoveFromStorageToToolPanel();
         }
-        else if (this.transform.parent.gameObject == FlowerShopToolPanelManager.Instance.gameObject)
+        else if (MainMenuManager.Instance.GetCurrentScene() == Scene.FlowerShopScene && this.transform.parent.gameObject == FlowerShopToolPanelManager.Instance.gameObject)
         {
             List<Pot> selectedPots = PotStandManager.Instance.GetSelectedPots();
             if (selectedPots != null)
