@@ -4,20 +4,33 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+
+public enum TutorialButtonType
+{
+    Click,
+    Drag
+}
+
 public class TutorialButton : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    private TutorialButtonType type;
     private GameObject indicator;
     private bool isDragging = false;
 
-    public void SetUp(GameObject indicatorSpawned)
+    public void SetUp(GameObject indicatorSpawned, TutorialButtonType type)
     {
         gameObject.GetComponent<Button>().onClick.AddListener(OnClickButton);
         indicator = indicatorSpawned;
+        this.type = type;
     }
 
     private void OnClickButton()
     {
-        RemoveIndicator();
+        if (type == TutorialButtonType.Click)
+        {
+            Debug.Log("Has cliked: remove indicator");
+            RemoveIndicator();
+        }    
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -32,8 +45,9 @@ public class TutorialButton : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (isDragging)
+        if (isDragging && type == TutorialButtonType.Drag)
         {
+            Debug.Log("Has drag: remove indicator");
             RemoveIndicator();
         }
         isDragging = false;
@@ -46,6 +60,10 @@ public class TutorialButton : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
             indicator.SetActive(false);
             Destroy(indicator);
         }
+        else
+        {
+            RemoveComponent();
+        }    
     }
 
     public void RemoveComponent()

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GardenSceneButton : MonoBehaviour
 {
-    SceneController sceneController;
+    [SerializeField] private SceneController sceneController;
 
     private void Awake()
     {

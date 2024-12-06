@@ -61,6 +61,7 @@ public class BaseFlower : MonoBehaviour
     private Camera mainCamera;
 
     private string flowerID;
+    private bool isCollected = false;
 
     private void Start()
     {
@@ -157,6 +158,14 @@ public class BaseFlower : MonoBehaviour
         else
         {
             Destroy(timerPanel);
+            if (GameManager.Instance.IsFirstTimePlayer())
+            {
+                if (TutorialManager.Instance.GetCurrentStepIndex() == 8 && TutorialManager.Instance.hasCutTheGrass)
+                {
+                    //step8SO.RaiseEvent();
+                    TutorialManager.Instance.OnActionCompleted(3f);
+                }
+            }
             HandleCollecting();
             dropletIndicator.SetActive(false);
             fertilizerIndicator.SetActive(false);
@@ -341,12 +350,30 @@ public class BaseFlower : MonoBehaviour
             indicatorWaitingTime -= Time.deltaTime;
             if (indicatorWaitingTime < 0)
             {
+                if (GameManager.Instance.IsFirstTimePlayer())
+                {
+                    if (!TutorialManager.Instance.hasWaterAppeared)
+                    {
+                        indicatorChosen = dropletIndicator;
+                        TutorialManager.Instance.hasWaterAppeared = true;
+
+                        if (TutorialManager.Instance.GetCurrentStepIndex() == 5 /*Gieo hạt*/)
+                        {
+                            TutorialManager.Instance.OnActionCompleted(2f);
+                        }
+                    }
+                }    
+
                 indicatorChosen.transform.position = flowerDataList[currentStateIndex].indicatorPos.position;
                 indicatorChosen.SetActive(true);
                 indicatorWaitingTimeMax = Random.Range(5f, 10f);
                 indicatorWaitingTime = indicatorWaitingTimeMax;
             }
         }
+    }
+    private IEnumerator WaitForSeconds(float time)
+    {
+        yield return new WaitForSeconds(time);
     }
 
     private void HandleWatering()
@@ -401,6 +428,23 @@ public class BaseFlower : MonoBehaviour
                     ActivateRandomGrass();
                     grassSpawnedTimeMax = GetRandomGrassSpawnedTime();
                     grassSpawnedTime = grassSpawnedTimeMax;
+
+                    if (GameManager.Instance.IsFirstTimePlayer())
+                    {
+                        if (TutorialManager.Instance.GetCurrentStepIndex() >= 5) //After gieo hạt
+                        {
+                            if (!TutorialManager.Instance.hasGrassAppeared)
+                            {
+                                //step8SO.RaiseEvent();
+                                TutorialManager.Instance.hasGrassAppeared = true;
+                            }
+
+                            if (TutorialManager.Instance.GetCurrentStepIndex() == 6 && TutorialManager.Instance.hasGrassAppeared)
+                            {
+                                TutorialManager.Instance.OnActionCompleted(3f);
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -431,6 +475,17 @@ public class BaseFlower : MonoBehaviour
             {
                 InventoryManager.Instance.Add(itemSO);
                 InventoryManager.Instance.IncreaseNumber(itemSO);
+            }
+
+            isCollected = true;
+
+            if (GameManager.Instance.IsFirstTimePlayer())
+            {
+                if (TutorialManager.Instance.GetCurrentStepIndex() == 9)
+                {
+                    //step10SO.RaiseEvent();
+                    TutorialManager.Instance.OnActionCompleted(3f);
+                }
             }
 
             Destroy(gameObject);
@@ -500,6 +555,15 @@ public class BaseFlower : MonoBehaviour
     public void DecreaseGrassAount()
     {
         grassAmount--;
+
+        if (GameManager.Instance.IsFirstTimePlayer())
+        {
+            if (TutorialManager.Instance.GetCurrentStepIndex() == 8)
+            {
+                //step9SO.RaiseEvent();
+                TutorialManager.Instance.hasCutTheGrass = true;
+            }
+        }
     }
 
     private void ActivateGrassAccordingToAmount(int amount)

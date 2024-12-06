@@ -96,7 +96,7 @@ public class Plantspot : MonoBehaviour, IDataPersistence
             AudioManager.Instance.PlaySPF(AudioManager.Instance.shovel);
             SetState(PlantSpotState.Hole);
 
-            if (GameManager.Instance.IsFirstTimePlayer() && isFirstTimeDigging)
+            if (GameManager.Instance.IsFirstTimePlayer() && isFirstTimeDigging && TutorialManager.Instance.GetCurrentStepIndex() == 3)
             {
                 TutorialManager.Instance.OnActionCompleted(2f);
                 isFirstTimeDigging = false;

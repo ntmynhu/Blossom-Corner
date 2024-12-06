@@ -114,7 +114,7 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void SaveGame()
     {
-        if (isLoadedDataDone)
+        if (isLoadedDataDone && !GameManager.Instance.IsFirstTimePlayer())
         {
             UpdateAllDataPersistenceObjects();
 

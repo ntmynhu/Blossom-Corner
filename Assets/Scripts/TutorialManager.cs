@@ -15,14 +15,15 @@ public class TutorialManager : MonoBehaviour
 
     [SerializeField] private List<TutorialStep> tutorialStepList = new List<TutorialStep>();
     [SerializeField] private GameObject circleIndicator;
+    [SerializeField] private GameObject fingerIndicator;
 
     [SerializeField] private GameObject toolPanel;
+    [SerializeField] private GameObject seedPanel;
     [SerializeField] private Transform mapButton;
     [SerializeField] private Transform gardenButton;
-    [SerializeField] private Transform potIcon;
-    [SerializeField] private Transform basicPotIcon;
-    [SerializeField] private Transform basicPotIconInShop;
     [SerializeField] private Transform shovelIcon;
+    [SerializeField] private Transform tulipSeedIcon;
+    [SerializeField] private Transform tulopSeedIconInShop;
     [SerializeField] private Transform fertilizerIcon;
     [SerializeField] private Transform seedIcon;
     [SerializeField] private Transform waterIcon;
@@ -145,63 +146,58 @@ public class TutorialManager : MonoBehaviour
             case 1:
                 indicator = circleIndicator;
 
-                AddButtonIndicator(mapButton);
-                AddButtonIndicator(gardenButton);
+                AddButtonIndicator(mapButton, TutorialButtonType.Click);
+                AddButtonIndicator(gardenButton, TutorialButtonType.Click);
                 break;
             case 3:
-                indicator = circleIndicator;
-
-                AddButtonIndicator(potIcon);
-                AddButtonIndicator(basicPotIcon);
-                AddButtonIndicator(basicPotIconInShop);
+                if (!toolPanel.activeSelf)
+                {
+                    toolPanel.SetActive(true);
+                }
+                indicator = fingerIndicator;
+                AddButtonIndicator(shovelIcon, TutorialButtonType.Drag);
                 break;
             case 5:
-                if (!toolPanel.activeSelf)
-                {
-                    toolPanel.SetActive(true);
-                }
                 indicator = circleIndicator;
-                AddButtonIndicator(shovelIcon);
+                AddButtonIndicator(seedIcon, TutorialButtonType.Click);
+                AddButtonIndicator(tulipSeedIcon, TutorialButtonType.Click);
+                AddButtonIndicator(tulopSeedIconInShop, TutorialButtonType.Click);
                 break;
             case 6:
-                indicator = circleIndicator;
-                AddButtonIndicator(seedIcon);
-                break;
-            case 7:
+                if (seedPanel.activeSelf)
+                {
+                    seedPanel.SetActive(false);
+                }
+
                 if (!toolPanel.activeSelf)
                 {
                     toolPanel.SetActive(true);
-                }
-                indicator = circleIndicator;
-                AddButtonIndicator(waterIcon);
+                }    
+                indicator = fingerIndicator;
+                AddButtonIndicator(waterIcon, TutorialButtonType.Drag);
                 break;
             case 8:
-                indicator = circleIndicator;
-                AddButtonIndicator(fertilizerIcon);
+                indicator = fingerIndicator;
+                AddButtonIndicator(scissorsIcon, TutorialButtonType.Drag);
                 break;
             case 9:
-                indicator = circleIndicator;
-                AddButtonIndicator(scissorsIcon);
+                indicator = fingerIndicator;
+                AddButtonIndicator(harvestIcon, TutorialButtonType.Drag);
                 break;
             case 10:
                 indicator = circleIndicator;
-                AddButtonIndicator(harvestIcon);
-                break;
-            case 11:
-                indicator = circleIndicator;
-                AddButtonIndicator(storageIcon);
-                break;
-            default:
+                AddButtonIndicator(storageIcon, TutorialButtonType.Drag);
                 break;
         }
     }
 
-    private void AddButtonIndicator(Transform transform)
+    private void AddButtonIndicator(Transform transform, TutorialButtonType type)
     {
+        Debug.Log(transform.gameObject.name + type);
         indicator.SetActive(true);
         var indicatorSpawned = Instantiate(indicator, transform);
         var tutorialButton = transform.gameObject.AddComponent<TutorialButton>();
-        tutorialButton.SetUp(indicatorSpawned);
+        tutorialButton.SetUp(indicatorSpawned, type);
         tutorialButtonList.Add(tutorialButton);
     }
 }
