@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour, IDataPersistence
     private int expPointMax;
     private int currentExpPoint;
 
+    private bool isFirstTimePlayer;
+
     public int GetCurrentMoney()
     {
         return currentMoney;
@@ -64,6 +66,17 @@ public class GameManager : MonoBehaviour, IDataPersistence
         this.currentMoney = data.playerMoney;
         this.playerLevel = data.playerLevel;
         Debug.Log("Load GameManager: " + currentExpPoint + " " + expPointMax + " " + currentMoney + " " + playerLevel);
+
+        isFirstTimePlayer = data.isFirstTimePlayer;
+        if (isFirstTimePlayer)
+        {
+            Debug.Log("Start tutorial");
+            TutorialManager.Instance.StartTutorial();
+        }
+        else
+        {
+            TutorialManager.Instance.EndTutorial();
+        }
     }
     public void SaveData(ref GameData data)
     {
@@ -71,6 +84,8 @@ public class GameManager : MonoBehaviour, IDataPersistence
         data.playerLevel = playerLevel;
         data.playerEXPPoint = currentExpPoint;
         data.playerEXPPointMax = expPointMax;
+
+        data.isFirstTimePlayer = !TutorialManager.Instance.IsFinished();
     }
 
     public int GetPlayerLevel()
@@ -95,5 +110,11 @@ public class GameManager : MonoBehaviour, IDataPersistence
         expPointMax += 150;
         GameUIManager.Instance.UpdateInfoUI();
         OnLevelChanged?.Invoke(this, EventArgs.Empty);
+    }
+
+    public bool IsFirstTimePlayer()
+    {
+        isFirstTimePlayer = !TutorialManager.Instance.IsFinished();
+        return isFirstTimePlayer;
     }
 }

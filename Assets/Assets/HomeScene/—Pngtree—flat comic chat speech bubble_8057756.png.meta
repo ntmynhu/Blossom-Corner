@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a72b54929bcc81b42ac04a578df600ed
+guid: 3aa01c3de50ba044f869696361fcdb63
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -111,7 +111,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,22 +123,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HomeSceneBackGround_Character_0
+      name: "\u2014Pngtree\u2014flat comic chat speech bubble_8057756_0"
       rect:
         serializedVersion: 2
-        x: 1147
-        y: 532
-        width: 1724
-        height: 1050
+        x: 200
+        y: 1119
+        width: 673
+        height: 509
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 197ddd2d350019b48bf81e7f32265299
-      internalID: 1416385045
+      spriteID: 266bc37f4883f8444966f0d2d1c8db2b
+      internalID: -1644620457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014flat comic chat speech bubble_8057756_1"
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 1156
+        width: 673
+        height: 485
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f06d18e8837ad64097982edb8aa9341
+      internalID: -881928724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014flat comic chat speech bubble_8057756_2"
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 395
+        width: 567
+        height: 564
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21a0cd65059bb32428c1cc6f82662641
+      internalID: -558933480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014flat comic chat speech bubble_8057756_3"
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 414
+        width: 686
+        height: 503
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3af18c405bc85fa439145691ea23c14d
+      internalID: -1115743573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014flat comic chat speech bubble_8057756_4"
+      rect:
+        serializedVersion: 2
+        x: 1641
+        y: 415
+        width: 100
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63d3e7c453203014381f96b9c9a9b68b
+      internalID: 1873273856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014flat comic chat speech bubble_8057756_5"
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 360
+        width: 67
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d05c38a2bf8341547a0c72ec13beb1ad
+      internalID: -185278184
       vertices: []
       indices: 
       edges: []
@@ -154,7 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      HomeSceneBackGround_Character_0: 1416385045
+      "\u2014Pngtree\u2014flat comic chat speech bubble_8057756_0": -1644620457
+      "\u2014Pngtree\u2014flat comic chat speech bubble_8057756_1": -881928724
+      "\u2014Pngtree\u2014flat comic chat speech bubble_8057756_2": -558933480
+      "\u2014Pngtree\u2014flat comic chat speech bubble_8057756_3": -1115743573
+      "\u2014Pngtree\u2014flat comic chat speech bubble_8057756_4": 1873273856
+      "\u2014Pngtree\u2014flat comic chat speech bubble_8057756_5": -185278184
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -41,46 +41,15 @@ public class Plantspot : MonoBehaviour, IDataPersistence
     private string currentFlowerID;
     private GameObject currentFlowerPrefab; //Giữ lại prefab mà code instantiate
 
+    private bool isFirstTimeDigging = true;
+    private bool isFirstTimePlanting = true;
+
     private void Start()
     {
 
     }
     private void Update()
     {
-        if (currentState == PlantSpotState.BlankSpot && ToolManager.Instance.IsHoldingTool() && isCollidingWithShovel && Input.GetMouseButton(0))
-        {
-            AudioManager.Instance.PlaySPF(AudioManager.Instance.shovel);
-            SetState(PlantSpotState.Hole);
-        }
-        
-        if (currentState == PlantSpotState.Hole && ToolManager.Instance.IsHoldingTool() && isCollidingWithSeedBag && Input.GetMouseButton(0))
-        {
-            ToolType toolType = ToolManager.Instance.GetToolType();
-            if (ShopManager.Instance.GetcurrentNumber(toolType) > 0)
-            {
-                switch (toolType)
-                {
-                    case ToolType.TulipSeedBag:
-                        PlantFlower(tulipPrefab);
-                        break;
-                    case ToolType.SunflowerSeedBag:
-                        PlantFlower(sunflowerPrefab);
-                        break;
-                    case ToolType.DaisySeedBag:
-                        PlantFlower(daisyPrefab);
-                        break;
-                    case ToolType.HydrangeaSeedBag:
-                        PlantFlower(hydrangeaPrefab);
-                        break;
-                    default:
-                        break;
-                }
-
-                SetState(PlantSpotState.SoilMoundlet);
-                ShopManager.Instance.DecreaseNumber(toolType);
-            }
-        }
-
         if (currentState == PlantSpotState.SoilMoundlet && currentFlower == null)
         {
             SetState(PlantSpotState.BlankSpot);
@@ -121,6 +90,46 @@ public class Plantspot : MonoBehaviour, IDataPersistence
         {
             isCollidingWithSeedBag = true;
         }
+
+        if (currentState == PlantSpotState.BlankSpot && ToolManager.Instance.IsHoldingTool() && isCollidingWithShovel && Input.GetMouseButton(0))
+        {
+            AudioManager.Instance.PlaySPF(AudioManager.Instance.shovel);
+            SetState(PlantSpotState.Hole);
+
+            if (GameManager.Instance.IsFirstTimePlayer() && isFirstTimeDigging)
+            {
+                TutorialManager.Instance.OnActionCompleted(2f);
+                isFirstTimeDigging = false;
+            }
+        }
+
+        if (currentState == PlantSpotState.Hole && ToolManager.Instance.IsHoldingTool() && isCollidingWithSeedBag && Input.GetMouseButton(0))
+        {
+            ToolType toolType = ToolManager.Instance.GetToolType();
+            if (ShopManager.Instance.GetcurrentNumber(toolType) > 0)
+            {
+                switch (toolType)
+                {
+                    case ToolType.TulipSeedBag:
+                        PlantFlower(tulipPrefab);
+                        break;
+                    case ToolType.SunflowerSeedBag:
+                        PlantFlower(sunflowerPrefab);
+                        break;
+                    case ToolType.DaisySeedBag:
+                        PlantFlower(daisyPrefab);
+                        break;
+                    case ToolType.HydrangeaSeedBag:
+                        PlantFlower(hydrangeaPrefab);
+                        break;
+                    default:
+                        break;
+                }
+
+                SetState(PlantSpotState.SoilMoundlet);
+                ShopManager.Instance.DecreaseNumber(toolType);
+            }
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -155,6 +164,12 @@ public class Plantspot : MonoBehaviour, IDataPersistence
 
         //Gán index bắt đầu là 0 cho cây được gieo trồng
         baseFlowerSpawned.Init();
+
+        if (GameManager.Instance.IsFirstTimePlayer() && isFirstTimePlanting)
+        {
+            TutorialManager.Instance.hasSownTheSeed = true;
+            isFirstTimePlanting = false;
+        }
     }
 
     public void LoadData(GameData data)

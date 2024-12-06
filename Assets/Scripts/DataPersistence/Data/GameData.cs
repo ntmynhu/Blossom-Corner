@@ -53,6 +53,8 @@ public class GameData
     public int playerLevel;
     public string playerName;
 
+    public bool isFirstTimePlayer;
+
     public SerializableDictionary<string, int> hasNumberButtons;
     public List<InventoryFlower> inventoryFlowers;
     public SerializableDictionary<string, PlantSpotSateData> gardenPlantSpots;
@@ -73,6 +75,8 @@ public class GameData
         inventoryFlowers = new List<InventoryFlower>();
         gardenPlantSpots = new SerializableDictionary<string, PlantSpotSateData>();
         flowerStates = new SerializableDictionary<string, FlowerState>();
+
+        isFirstTimePlayer = true;
 
         /*shopCustomers = new List<CustomerState>();
         orderList = new List<CustomerOrder>();*/
