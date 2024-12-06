@@ -45,6 +45,7 @@ public class ToolManager : MonoBehaviour
     [SerializeField] private GameObject fertilizer;
     [SerializeField] private GameObject gloves;
     [SerializeField] private GameObject seedBag;
+    [SerializeField] private GameObject basicpot;
 
     private ToolType currentToolType = ToolType.None;
     private GameObject currentTool;
@@ -139,13 +140,16 @@ public class ToolManager : MonoBehaviour
             case ToolType.SeedBag:
                 currentTool = seedBag;
                 break;
+            case ToolType.BasicPot:
+                currentTool = basicpot;
+                break;
         }
 
     }
 
     private void ToggleTool()
     {
-        currentTool.transform.position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        currentTool.transform.position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);  
         currentInitialPos = currentTool.transform.position;
 
         if (currentTool != null)

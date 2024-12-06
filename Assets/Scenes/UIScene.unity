@@ -5713,6 +5713,7 @@ GameObject:
   - component: {fileID: 544226761}
   - component: {fileID: 544226764}
   - component: {fileID: 544226765}
+  - component: {fileID: 544226766}
   m_Layer: 5
   m_Name: PotButton
   m_TagString: PotButton
@@ -5853,6 +5854,19 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 4, y: -4}
   m_UseGraphicAlpha: 1
+--- !u!114 &544226766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544226758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5d74609bdeaace45aa3845d0c50d7ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toolType: 11
 --- !u!1 &547311084
 GameObject:
   m_ObjectHideFlags: 0

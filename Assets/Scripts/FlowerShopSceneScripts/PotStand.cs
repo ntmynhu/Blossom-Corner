@@ -26,7 +26,7 @@ public class PotStand : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (!isSelected && !IsAllPotsPlaced())
+        /*if (!isSelected && !IsAllPotsPlaced())
         {
             PotStandManager.Instance.SelectPotStand(this);
         }
@@ -34,7 +34,7 @@ public class PotStand : MonoBehaviour
         {
             isSelected = false;
             PotStandManager.Instance.DeselectPotStand();
-        }
+        }*/
     }
 
     public void ActivateSelectedVisual()

@@ -6,6 +6,23 @@ using UnityEngine.UI;
 
 public class PotButton : HasNumberButton
 {
+    #region Singleton
+    private static PotButton instance;
+    public static PotButton Instance => instance;
+
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
+    #endregion 
+
     private void Start()
     {
         GetComponent<Button>().onClick.AddListener(OnButtonClick);
@@ -33,13 +50,13 @@ public class PotButton : HasNumberButton
                 if (currentNumber > 0 && PotStandManager.Instance.IsSelectingPotStand())
                 {
                     PotStandManager.Instance.PlacePot();
-                    UpdatePotButtonUI(ref currentNumber);
+                    UpdatePotButtonUI();
                 }
             }
         }
     }
 
-    private void UpdatePotButtonUI(ref int currentNumber)
+    public void UpdatePotButtonUI()
     {
         currentNumber--;
         numberText.text = currentNumber.ToString();
