@@ -20,7 +20,7 @@ public class PotSpot : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Pot") && !hasPot)
+        if (collision.gameObject.CompareTag("PotUI") && !hasPot)
         {
             if (PotButton.Instance.GetCurrentNumber() > 0)
             {
@@ -30,6 +30,14 @@ public class PotSpot : MonoBehaviour
                 // Tắt collider để tránh trùng với collider của pot
                 GetComponent<BoxCollider2D>().enabled = false;
                 PotButton.Instance.UpdatePotButtonUI();
+
+                if (GameManager.Instance.IsFirstTimePlayer())
+                {
+                    if (TutorialManager.Instance.GetCurrentStepIndex() == 14)
+                    {
+                        TutorialManager.Instance.OnActionCompleted(2f);
+                    }
+                }    
             }    
         }    
     }

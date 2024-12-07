@@ -70,6 +70,14 @@ public class FlowerShopManager : MonoBehaviour
                 SpawnCustomer();
                 customerSpawningTimeMax = GetRandomCustomereSpawningWaitingTime();
                 customerSpawningTime = customerSpawningTimeMax;
+
+                if (GameManager.Instance.IsFirstTimePlayer())
+                {
+                    if (TutorialManager.Instance.GetCurrentStepIndex() == 15)
+                    {
+                        TutorialManager.Instance.OnActionCompleted(2f);
+                    }
+                }
             }
         }
     }

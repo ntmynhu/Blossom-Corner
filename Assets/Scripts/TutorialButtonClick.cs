@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StorageTutorialButton : MonoBehaviour
+public class TutorialButtonClick : MonoBehaviour
 {
+    [SerializeField] private int step;
+    [SerializeField] private float time;
+
     private void Awake()
     {
         GetComponent<Button>().onClick.AddListener(OnButtonClick);
@@ -14,9 +17,9 @@ public class StorageTutorialButton : MonoBehaviour
     {
         if (GameManager.Instance.IsFirstTimePlayer())
         {
-            if (TutorialManager.Instance.GetCurrentStepIndex() == 10)
+            if (TutorialManager.Instance.GetCurrentStepIndex() == step)
             {
-                TutorialManager.Instance.OnActionCompleted(2f);
+                TutorialManager.Instance.OnActionCompleted(time);
             }    
         }  
         else

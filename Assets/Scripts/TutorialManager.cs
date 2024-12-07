@@ -30,6 +30,10 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private Transform harvestIcon;
     [SerializeField] private Transform scissorsIcon;
     [SerializeField] private Transform storageIcon;
+    [SerializeField] private Transform flowerShopIcon;
+    [SerializeField] private Transform potAreaIcon;
+    [SerializeField] private Transform potPurchaseIcon;
+    [SerializeField] private Transform potIcon;
 
     private int currentStepIndex;
     private TutorialStep currentStep;
@@ -160,8 +164,10 @@ public class TutorialManager : MonoBehaviour
             case 5:
                 indicator = circleIndicator;
                 AddButtonIndicator(seedIcon, TutorialButtonType.Click);
-                AddButtonIndicator(tulipSeedIcon, TutorialButtonType.Click);
                 AddButtonIndicator(tulopSeedIconInShop, TutorialButtonType.Click);
+
+                indicator = fingerIndicator;
+                AddButtonIndicator(tulipSeedIcon, TutorialButtonType.Drag);
                 break;
             case 6:
                 if (seedPanel.activeSelf)
@@ -186,7 +192,20 @@ public class TutorialManager : MonoBehaviour
                 break;
             case 10:
                 indicator = circleIndicator;
-                AddButtonIndicator(storageIcon, TutorialButtonType.Drag);
+                AddButtonIndicator(storageIcon, TutorialButtonType.Click);
+                break;
+            case 12:
+                indicator = circleIndicator;
+                AddButtonIndicator(flowerShopIcon, TutorialButtonType.Click);
+                AddButtonIndicator(mapButton, TutorialButtonType.Click);
+                break;
+            case 14:
+                indicator = circleIndicator;
+                AddButtonIndicator(potAreaIcon, TutorialButtonType.Click);
+                AddButtonIndicator(potPurchaseIcon, TutorialButtonType.Click);
+
+                indicator = fingerIndicator;
+                AddButtonIndicator(potIcon, TutorialButtonType.Drag);
                 break;
         }
     }

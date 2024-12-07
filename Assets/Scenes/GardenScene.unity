@@ -2654,7 +2654,7 @@ GameObject:
   - component: {fileID: 1710438950}
   m_Layer: 0
   m_Name: BasicPot
-  m_TagString: Pot
+  m_TagString: PotUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

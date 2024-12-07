@@ -62,6 +62,14 @@ public class BaseCustomer : MonoBehaviour
 
         GameManager.Instance.AddMoney(totalMoneyEarned);
         GameManager.Instance.AddExpPoint(totalExpPoint);
+
+        if (GameManager.Instance.IsFirstTimePlayer())
+        {
+            if (TutorialManager.Instance.GetCurrentStepIndex() ==  17)
+            {
+                TutorialManager.Instance.OnActionCompleted(2f);
+            }
+        }
     }
 
     private void MainMenu_OnSceneChanged(object sender, System.EventArgs e)
