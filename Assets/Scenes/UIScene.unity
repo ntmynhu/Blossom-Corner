@@ -18794,7 +18794,7 @@ MonoBehaviour:
   - tutorialPanel: {fileID: 1605909749}
     confirmButton: {fileID: 2038381695}
   - tutorialPanel: {fileID: 2086710109}
-    confirmButton: {fileID: 1532773260}
+    confirmButton: {fileID: 0}
   - tutorialPanel: {fileID: 145141885}
     confirmButton: {fileID: 747975893}
   - tutorialPanel: {fileID: 837525476}
